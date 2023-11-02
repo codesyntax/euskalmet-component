@@ -50,6 +50,14 @@ class Euskalmet extends HTMLElement {
     return this.getAttribute('short-text');
   }
 
+  get customBaseUrl() {
+    return this.getAttribute('custom-base-url');
+  }
+
+  get customIconExtension() {
+    return this.getAttribute('custom-icon-extension');
+  }
+
   async connectedCallback() {
     const response = await fetch(getForecastUrl(this.city));
     const data = await response.json();
@@ -65,12 +73,18 @@ class Euskalmet extends HTMLElement {
       const dateText = item.date.split('T')[0];
       const shortText = this.shortText ? forecastText : '';
 
+      const imageUrl = this.customBaseUrl
+        ? this.customIconExtension
+          ? `${this.customBaseUrl}/${item.weather.id}.${this.customIconExtension}`
+          : `${this.customBaseUrl}/${item.weather.icon_name}`
+        : item.weather.full_path;
+
       div.innerHTML = `
       <p class="euskalmet-forecast-date">
         ${dateText}
       </p>
       <p class="euskalmet-forecast-symbol">
-        <img src="${item.weather.full_path}" alt="${forecastText}" /> <br/>
+        <img src="${imageUrl}" alt="${forecastText}" /> <br/>
         ${shortText}
       </p>
 
