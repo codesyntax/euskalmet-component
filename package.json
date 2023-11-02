@@ -1,0 +1,11 @@
+{
+  "name": "euskalmet-component",
+  "version": "1.0.0",
+  "description": "A Web Component to show the wheather in your city using Euskalmet's API",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mikel Larreategi",
+  "license": "MIT"
+}
