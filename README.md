@@ -32,6 +32,12 @@ Erabili daitezkeen aukerak hauexek dira:
 - language: eu|es. Momentuz ez dut testurik bistan erakusten, irudiaren `alt` bezala bakarrik.
 - direction: column|row. Ikonoak zutabean edo lerroan erakusteko aukera.
 
+## Adibidea
+
+[Oinarrizko adibidea](https://erral.github.io/euskalmet-component/src/index.html) automatikoki argitaratzen da GitHuben bertan.
+
+Bertan dituzu erabiliera adibide gehiago.
+
 ## Zer gehiago?
 
 Osagai hau osatu egin nahi dut eta ezaugarri hauek gehitu:
