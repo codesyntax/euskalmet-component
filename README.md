@@ -27,10 +27,11 @@ Eta ondoren erakutsi zure iragarpena:
 
 Erabili daitezkeen aukerak hauexek dira:
 
-- city: eibar|antzuola. Momentuz Eibar eta Antzuolako iragarpenak bakarrik ditut, baina laster jarriko ditut Euskalmeten APIak ematen dituen guztiak
+- city: eibar. Euskalmetek eskaintzen dituen herri guztiak erabili daitezke. [Ikusi zerrenda hemen](https://github.com/erral/eguraldi_iragarpena/tree/main/forecasts)
 - days: zenbat egunetako iragarpena erakutsi nahi duzun. Gehienez 7 egun izan daitezke.
 - language: eu|es. Momentuz ez dut testurik bistan erakusten, irudiaren `alt` bezala bakarrik.
 - direction: column|row. Ikonoak zutabean edo lerroan erakusteko aukera.
+- short-text: true. Hau pasatuz gero, iragarpenaren testu laburra agertuko da (oskarbi, euria, zaparradak, ...)
 
 ## Adibidea
 

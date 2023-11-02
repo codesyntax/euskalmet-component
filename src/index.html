@@ -2,11 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>euskalmet</title>
+    <title>Euskalmeten aurreikuspenak</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
   </head>
 
-  <body>
-    <script src="./euskalmet.js"></script>
+  <body class="container">
+    <script src="./euskalmet.js?"></script>
 
     <h1>Euskalmeten eguraldi iragarpena zure webgunean</h1>
 
@@ -17,16 +21,25 @@
         days="3"
         language="eu"
         direction="row"
+        short-text="true">
+      <strong>Hartu kodea</strong><br />
+      <textarea rows="6">
+      <euskalmet-eguraldia
+        city="eibar"
+        days="3"
+        language="eu"
+        direction="row"
       ></euskalmet-eguraldia>
+      </textarea>
     </section>
 
     <section>
       <h2>Bi herri zutabeka elkarren ondoan</h2>
       <div style="display: flex; flex-direction: row">
         <div class="bat">
-          <h3>Eibar</h3>
+          <h3>Bergara</h3>
           <euskalmet-eguraldia
-            city="eibar"
+            city="bergara"
             days="2"
             language="eu"
             direction="column"
@@ -37,6 +50,41 @@
 
           <euskalmet-eguraldia
             city="antzuola"
+            days="2"
+            language="eu"
+            direction="column"
+          ></euskalmet-eguraldia>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Beste hiru hiri</h2>
+      <div style="display: flex; flex-direction: row">
+        <div class="bat">
+          <h3>Santurtzi</h3>
+
+          <euskalmet-eguraldia
+            city="santurtzi"
+            days="2"
+            language="eu"
+            direction="column"
+          ></euskalmet-eguraldia>
+        </div>
+        <div class="bat">
+          <h3>Zigoitia</h3>
+
+          <euskalmet-eguraldia
+            city="zigoitia"
+            days="2"
+            language="eu"
+            direction="column"
+          ></euskalmet-eguraldia>
+        </div>
+        <div class="bat">
+          <h3>Zegama</h3>
+
+          <euskalmet-eguraldia
+            city="zegama"
             days="2"
             language="eu"
             direction="column"
