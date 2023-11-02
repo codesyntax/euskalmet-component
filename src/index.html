@@ -7,11 +7,42 @@
 
   <body>
     <script src="./euskalmet.js"></script>
-    <euskalmet-eguraldia
-      city="eibar"
-      days="3"
-      language="eu"
-      direction="column"
-    ></euskalmet-eguraldia>
+
+    <h1>Euskalmeten eguraldi iragarpena zure webgunean</h1>
+
+    <section>
+      <h2>Eibarko 3 egunetakoa errenkada baten</h2>
+      <euskalmet-eguraldia
+        city="eibar"
+        days="3"
+        language="eu"
+        direction="row"
+      ></euskalmet-eguraldia>
+    </section>
+
+    <section>
+      <h2>Bi herri zutabeka elkarren ondoan</h2>
+      <div style="display: flex; flex-direction: row">
+        <div class="bat">
+          <h3>Eibar</h3>
+          <euskalmet-eguraldia
+            city="eibar"
+            days="2"
+            language="eu"
+            direction="column"
+          ></euskalmet-eguraldia>
+        </div>
+        <div class="bat">
+          <h3>Antzuola</h3>
+
+          <euskalmet-eguraldia
+            city="antzuola"
+            days="2"
+            language="eu"
+            direction="column"
+          ></euskalmet-eguraldia>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

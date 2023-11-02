@@ -58,7 +58,12 @@ class Euskalmet extends HTMLElement {
       let div = document.createElement("div");
       let forecastText = item.weather.nameByLang[this.language];
       div.className = "euskalmet-forecast-day";
+      const date = new Date(item.date);
+      const dateText = `${date.getFullYear()}-${date.getMonth()}-${date.getDay()}`;
       div.innerHTML = `
+      <p class="euskalmet-forecast-date">
+        ${dateText}
+      </p>
       <p class="euskalmet-forecast-symbol">
         <img src="${item.weather.full_path}" alt="${forecastText}" />
       </p>
