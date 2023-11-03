@@ -74,10 +74,12 @@ class Euskalmet extends HTMLElement {
       let div = document.createElement('div');
       let forecastText = item.weather.nameByLang[this.language];
       div.className = 'euskalmet-forecast-day';
-      const dateText = item.date.split('T')[0];
-      const shortText = this.shortText ? forecastText : '';
 
-      const imageUrl = this.customBaseUrl
+      let dateObject = new Date(item.date);
+      let dateText = `${dateObject.getFullYear()}-${dateObject.getMonth()}-${dateObject.getDate()}`;
+      let shortText = this.shortText ? forecastText : '';
+
+      let imageUrl = this.customBaseUrl
         ? this.customIconExtension
           ? `${this.customBaseUrl}/${item.weather.id}.${this.customIconExtension}`
           : `${this.customBaseUrl}/${item.weather.icon_name}`
