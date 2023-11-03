@@ -14,8 +14,13 @@ const AVAILABLE_LANGUAGES = {
 const template = document.createElement('template');
 
 template.innerHTML = `
-  <style type="text/css">
+  <style>
+    .euskalmet .euskalmet-forecast-day {
+      padding: var(--euskalmet-forecast-day-padding, 1rem 1rem);
+      text-align: var(--euskalmet-forecast-day-text-align, center)
+    }
     .euskalmet-body { display: flex };
+
   </style>
   <div class="euskalmet">
     <div class="euskalmet-inner">
