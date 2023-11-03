@@ -1,5 +1,9 @@
 const getForecastUrl = (city) => {
-  return `https://raw.githubusercontent.com/erral/eguraldi_iragarpena/main/forecasts/${city}-euskalmet.json`;
+  // Add a cache buster parameter that changes every 4 hours
+  // in order to avoid caching the JSON with the forecast
+  // in the client's browser
+  const cache_buster = parseInt(new Date().getTime() / (1000 * 60 * 60 * 4));
+  return `https://raw.githubusercontent.com/erral/eguraldi_iragarpena/main/forecasts/${city}-euskalmet.json?time=${cache_buster}`;
 };
 
 const AVAILABLE_LANGUAGES = {
