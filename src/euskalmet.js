@@ -67,6 +67,10 @@ class Euskalmet extends HTMLElement {
     return this.getAttribute('custom-icon-extension');
   }
 
+  get modernImages() {
+    return this.getAttribute('modern-images');
+  }
+
   async connectedCallback() {
     const response = await fetch(getForecastUrl(this.city));
     const data = await response.json();
@@ -84,7 +88,13 @@ class Euskalmet extends HTMLElement {
       let dateText = `${dateObject.getFullYear()}-${dateObject.getMonth()}-${dateObject.getDate()}`;
       let shortText = this.shortText ? forecastText : '';
 
-      let imageUrl = this.customBaseUrl
+      let imageUrl = this.modernImages
+        ? this.customBaseUrl
+          ? this.customIconExtension
+            ? `${this.customBaseUrl}/i${item.weather.id}d.${this.customIconExtension}`
+            : `${this.customBaseUrl}/${item.weather.icon_name_modern}`
+          : item.weather.full_path_modern
+        : this.customBaseUrl
         ? this.customIconExtension
           ? `${this.customBaseUrl}/${item.weather.id}.${this.customIconExtension}`
           : `${this.customBaseUrl}/${item.weather.icon_name}`

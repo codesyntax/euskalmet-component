@@ -27,13 +27,14 @@ Eta ondoren erakutsi zure iragarpena:
 
 Erabili daitezkeen aukerak hauexek dira:
 
-- city: eibar. Euskalmetek eskaintzen dituen herri guztiak erabili daitezke. [Ikusi zerrenda hemen](https://github.com/erral/eguraldi_iragarpena/tree/main/forecasts)
-- days: zenbat egunetako iragarpena erakutsi nahi duzun. Gehienez 7 egun izan daitezke.
-- language: eu|es. Momentuz ez dut testurik bistan erakusten, irudiaren `alt` bezala bakarrik.
-- direction: column|row. Ikonoak zutabean edo lerroan erakusteko aukera.
-- short-text: (hautazkoa) true. Hau pasatuz gero, iragarpenaren testu laburra agertuko da (oskarbi, euria, zaparradak, ...)
-- custom-base-url: (hautazkoa) Euskalmeten ikonoak beharrean beste batzuk erabili nahi badituzu, ikono horiek dauden URLa pasatu hemen. Ikonoen izenak berberak izan behar dira. [Ikusi ikono zerrenda hemen](https://github.com/erral/eguraldi_iragarpena/tree/main/images)
-- custom-icon-extension: (hautazkoa) defektuzko png luzapena erabili beharrean, beste formatu bateko ikonoak sortzen badituzu (adibidez GIF), hemen adierazi ikono horiek fitxategien luzapena. Ikono guztientzat berbera izan behar da. Adi: aukera honek aurrekoarekin batera bakarrik funtzionatuko du.
+- `city`: eibar. Euskalmetek eskaintzen dituen herri guztiak erabili daitezke. [Ikusi zerrenda hemen](https://github.com/erral/eguraldi_iragarpena/tree/main/forecasts)
+- `days`: zenbat egunetako iragarpena erakutsi nahi duzun. Gehienez 7 egun izan daitezke.
+- `language`: eu|es. Momentuz ez dut testurik bistan erakusten, irudiaren `alt` bezala bakarrik.
+- `direction`: column|row. Ikonoak zutabean edo lerroan erakusteko aukera.
+- `short-text`: (hautazkoa) true. Hau pasatuz gero, iragarpenaren testu laburra agertuko da (oskarbi, euria, zaparradak, ...)
+- `custom-base-url`: (hautazkoa) Euskalmeten ikonoak beharrean beste batzuk erabili nahi badituzu, ikono horiek dauden URLa pasatu hemen. Ikonoen izenak berberak izan behar dira. [Ikusi ikono zerrenda hemen](https://github.com/erral/eguraldi_iragarpena/tree/main/images)
+- `custom-icon-extension`: (hautazkoa) defektuzko png luzapena erabili beharrean, beste formatu bateko ikonoak sortzen badituzu (adibidez GIF), hemen adierazi ikono horiek fitxategien luzapena. Ikono guztientzat berbera izan behar da. Adi: aukera honek aurrekoarekin batera bakarrik funtzionatuko du.
+- `modern-images`: (hautazkoa) true. Hau pasatuz gero, Euskalmeten webgune berriko ikonoak erabiliko dira. [Ikusi ikono berrien zerrenda hemen](https://github.com/erral/eguraldi_iragarpena/tree/main/images-modern). Aukera hau `custom-base-url` eta `custom-icon-extension` aukerekin bateragarria da. Kontuan izan ikono berrien izena zertxobait desberdina dela: `10.png` vs. `i10d.svg`
 
 ## Adibidea
 
