@@ -11,7 +11,7 @@ Horretarako [Web Component](https://developer.mozilla.org/en-US/docs/Web/API/Web
 Kargatu `euskalmet.js` fitxtegia zure HTMLan. Horrelako zerbait izango da:
 
 ```html
-<script src="https://raw.githubusercontent.com/erral/euskalmet-component/main/src/euskalmet.js" />
+<script src="https://raw.githubusercontent.com/codesyntax/euskalmet-component/main/src/euskalmet.js" />
 ```
 
 Eta ondoren erakutsi zure iragarpena:
