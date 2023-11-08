@@ -3,7 +3,7 @@ const getForecastUrl = (city) => {
   // in order to avoid caching the JSON with the forecast
   // in the client's browser
   const cache_buster = parseInt(new Date().getTime() / (1000 * 60 * 60 * 4));
-  return `https://raw.githubusercontent.com/erral/eguraldi_iragarpena/main/forecasts/${city}-euskalmet.json?time=${cache_buster}`;
+  return `https://raw.githubusercontent.com/codesyntax/euskalmet-eguraldi-iragarpena/main/forecasts/${city}-euskalmet.json?time=${cache_buster}`;
 };
 
 const AVAILABLE_LANGUAGES = {
