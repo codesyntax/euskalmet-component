@@ -85,7 +85,9 @@ class Euskalmet extends HTMLElement {
       div.className = 'euskalmet-forecast-day';
 
       let dateObject = new Date(item.date);
-      let dateText = `${dateObject.getFullYear()}-${dateObject.getMonth()}-${dateObject.getDate()}`;
+      let dateText = dateObject.toLocaleDateString('eu-ES', {
+        timeZone: 'Europe/Madrid',
+      });
       let shortText = this.shortText ? forecastText : '';
 
       let imageUrl = this.modernImages
