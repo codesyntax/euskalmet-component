@@ -34,7 +34,7 @@ Erabili daitezkeen aukerak hauexek dira:
 - `short-text`: (hautazkoa) true. Hau pasatuz gero, iragarpenaren testu laburra agertuko da (oskarbi, euria, zaparradak, ...)
 - `custom-base-url`: (hautazkoa) Euskalmeten ikonoak beharrean beste batzuk erabili nahi badituzu, ikono horiek dauden URLa pasatu hemen. Ikonoen izenak berberak izan behar dira. [Ikusi ikono zerrenda hemen](https://github.com/codesyntax/euskalment-eguraldi-iragarpena/tree/main/images)
 - `custom-icon-extension`: (hautazkoa) defektuzko png luzapena erabili beharrean, beste formatu bateko ikonoak sortzen badituzu (adibidez GIF), hemen adierazi ikono horiek fitxategien luzapena. Ikono guztientzat berbera izan behar da. Adi: aukera honek aurrekoarekin batera bakarrik funtzionatuko du.
-- `modern-images`: (hautazkoa) true. Hau pasatuz gero, Euskalmeten webgune berriko ikonoak erabiliko dira. [Ikusi ikono berrien zerrenda hemen](https://github.com/codesyntax/euskalmet-eguraldi-iragarpena/tree/main/images-modern). Aukera hau `custom-base-url` eta `custom-icon-extension` aukerekin bateragarria da. Kontuan izan ikono berrien izena zertxobait desberdina dela: `10.png` vs. `i10d.svg`
+- `modern-images`: (hautazkoa) true. Hau pasatuz gero, Euskalmeten webgune berriko ikonoak erabiliko dira. [Ikusi ikono berrien zerrenda hemen](https://github.com/codesyntax/euskalmet-eguraldi-iragarpena/tree/main/images-modern). Aukera hau `custom-base-url` eta `custom-icon-extension` aukerekin bateragarria da. Kontuan izan ikono berrien izena zertxobait desberdina dela: `10.png` vs. `webmet00-i10d.svg`
 
 ## Adibidea
 
