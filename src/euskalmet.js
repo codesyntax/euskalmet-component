@@ -94,7 +94,7 @@ class Euskalmet extends HTMLElement {
         ? this.customBaseUrl
           ? this.customIconExtension
             ? `${this.customBaseUrl}/i${item.weather.id}d.${this.customIconExtension}`
-            : `${this.customBaseUrl}/${item.weather.icon_name_modern}`
+            : `${this.customBaseUrl}/webmet00-${item.weather.icon_name_modern}`
           : item.weather.full_path_modern
         : this.customBaseUrl
         ? this.customIconExtension
