@@ -7,11 +7,11 @@ const getForecastUrl = (city) => {
 };
 
 const AVAILABLE_LANGUAGES = {
-  eu: 'BASQUE',
-  es: 'SPANISH',
+  eu: "BASQUE",
+  es: "SPANISH",
 };
 
-const template = document.createElement('template');
+const template = document.createElement("template");
 
 template.innerHTML = `
   <style>
@@ -35,60 +35,60 @@ template.innerHTML = `
 class Euskalmet extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
     this._shadowRoot.appendChild(template.content.cloneNode(true));
   }
 
   get city() {
-    return this.getAttribute('city');
+    return this.getAttribute("city");
   }
 
   get days() {
-    return this.getAttribute('days');
+    return this.getAttribute("days");
   }
 
   get language() {
-    return AVAILABLE_LANGUAGES[this.getAttribute('language')];
+    return AVAILABLE_LANGUAGES[this.getAttribute("language")];
   }
 
   get direction() {
-    return this.getAttribute('direction');
+    return this.getAttribute("direction");
   }
 
   get shortText() {
-    return this.getAttribute('short-text');
+    return this.getAttribute("short-text");
   }
 
   get customBaseUrl() {
-    return this.getAttribute('custom-base-url');
+    return this.getAttribute("custom-base-url");
   }
 
   get customIconExtension() {
-    return this.getAttribute('custom-icon-extension');
+    return this.getAttribute("custom-icon-extension");
   }
 
   get modernImages() {
-    return this.getAttribute('modern-images');
+    return this.getAttribute("modern-images");
   }
 
   async connectedCallback() {
     const response = await fetch(getForecastUrl(this.city));
     const data = await response.json();
-    const trends = data['trendsByDate'].sort((a, b) => {
-      return a['date'].localeCompare(b['date']);
+    const trends = data["trendsByDate"].sort((a, b) => {
+      return a["date"].localeCompare(b["date"]);
     });
-    const body = this._shadowRoot.querySelector('.euskalmet-body');
+    const body = this._shadowRoot.querySelector(".euskalmet-body");
     body.style = `flex-direction: ${this.direction}`;
     trends.slice(0, parseInt(this.days)).map((item) => {
-      let div = document.createElement('div');
+      let div = document.createElement("div");
       let forecastText = item.weather.nameByLang[this.language];
-      div.className = 'euskalmet-forecast-day';
+      div.className = "euskalmet-forecast-day";
 
       let dateObject = new Date(item.date);
-      let dateText = dateObject.toLocaleDateString('eu-ES', {
-        timeZone: 'Europe/Madrid',
+      let dateText = dateObject.toLocaleDateString("eu-ES", {
+        timeZone: "Europe/Madrid",
       });
-      let shortText = this.shortText ? forecastText : '';
+      let shortText = this.shortText ? forecastText : "";
 
       let imageUrl = this.modernImages
         ? this.customBaseUrl
@@ -122,4 +122,4 @@ class Euskalmet extends HTMLElement {
   }
 }
 
-window.customElements.define('euskalmet-eguraldia', Euskalmet);
+window.customElements.define("euskalmet-eguraldia", Euskalmet);
